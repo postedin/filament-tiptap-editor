@@ -53,7 +53,7 @@ class TiptapConverter
             new StarterKit([
                 'listItem' => false,
             ]),
-            new TextStyle,
+            //new TextStyle,
             new Extensions\TextAlign([
                 'types' => ['heading', 'paragraph'],
             ]),
