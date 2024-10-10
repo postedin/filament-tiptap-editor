@@ -192,9 +192,9 @@ export default function tiptap({
                 History,
                 TextStyle,
                 DragAndDropExtension,
-                ClassExtension,
-                IdExtension,
-                StyleExtension,
+                // ClassExtension,
+                // IdExtension,
+                // StyleExtension,
                 StatePath.configure({
                     statePath: statePath
                 }),
