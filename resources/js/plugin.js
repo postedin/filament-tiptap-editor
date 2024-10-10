@@ -190,7 +190,7 @@ export default function tiptap({
                 Gapcursor,
                 HardBreak,
                 History,
-                TextStyle,
+                // TextStyle,
                 DragAndDropExtension,
                 // ClassExtension,
                 // IdExtension,
