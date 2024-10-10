@@ -1,7 +1,7 @@
 import {Editor, isActive} from "@tiptap/core";
 import Blockquote from "@tiptap/extension-blockquote";
 import Bold from "@tiptap/extension-bold";
-import BulletList from "@tiptap/extension-bullet-list";
+import BulletList from "@tiptap/extension-bullet-list";I 
 import Code from "@tiptap/extension-code";
 import Color from "@tiptap/extension-color";
 import Document from "@tiptap/extension-document";
@@ -74,7 +74,7 @@ let coreExtensions = {
             class: "hljs",
         },
     })],
-    color: [Color],
+    // color: [Color],
     details: [Details, DetailsSummary, DetailsContent],
     grid: [Grid, GridColumn],
     'grid-builder': [GridBuilder, GridBuilderColumn],
