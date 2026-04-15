@@ -1,7 +1,7 @@
 import { Editor, isActive } from "@tiptap/core";
 import Blockquote from "@tiptap/extension-blockquote";
 import Bold from "@tiptap/extension-bold";
-import BulletList from "@tiptap/extension-bullet-list"; I
+import BulletList from "@tiptap/extension-bullet-list";
 import Code from "@tiptap/extension-code";
 import Color from "@tiptap/extension-color";
 import Document from "@tiptap/extension-document";
