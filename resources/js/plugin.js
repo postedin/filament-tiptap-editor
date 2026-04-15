@@ -363,6 +363,7 @@ export default function tiptap({
 					},
 					onUpdate({ editor }) {
 						_this.updatedAt = Date.now();
+						if (_this._updatingFromExternal) return;
 						_this.state = editor.isEmpty ? null : editor.getJSON();
 					},
 					onSelectionUpdate() {
@@ -402,10 +403,15 @@ export default function tiptap({
 			this.updatedAt = Date.now()
 		},
 		updateEditorContent(content) {
-			if (editor.isEditable) {
+			if (editor.isEditable && !this._updatingFromExternal) {
 				const { from, to } = editor.state.selection;
-				editor.commands.setContent(content, true);
-				editor.chain().focus().setTextSelection({ from, to }).run();
+				this._updatingFromExternal = true;
+				try {
+					editor.commands.setContent(content, true);
+					editor.chain().focus().setTextSelection({ from, to }).run();
+				} finally {
+					this._updatingFromExternal = false;
+				}
 			}
 		},
 		refreshEditorContent() {
